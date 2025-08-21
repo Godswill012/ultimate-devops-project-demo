@@ -54,3 +54,13 @@ test/tracetesting/tracetesting-vars.yaml
 *.apk
 
 !src/currency/build
+# Terraform
+*.tfstate
+*.tfstate.backup
+errored.tfstate
+crash.log
+.terraform/
+.terraform.lock.hcl
+
+# System files
+C:WindowsSystem32driversetchosts
