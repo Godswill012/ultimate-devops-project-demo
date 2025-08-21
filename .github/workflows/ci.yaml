@@ -7,6 +7,9 @@ on:
         branches:
         - main
 
+permissions:
+  contents: write        
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -47,7 +50,7 @@ jobs:
           uses: golangci/golangci-lint-action@v6
           with:
             version: v1.55.2
-            run: golangci-lint run
+            run: run ./...
             working-directory: src/product-catalog
 
     docker:
